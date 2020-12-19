@@ -1,0 +1,118 @@
+.quotess{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: $color-black;
+    &__items{
+        &--left{
+            margin: auto 0;
+        }
+    }
+    &__subtitle{
+        @include font($font-babue, 24px);
+        color: $color-white;
+    }
+    &__title{
+        @include font($font-babue, 80px);
+        color: $color-white;
+        margin: 21px 0 62px;
+    }
+    &__description{
+        @include font($font-open, 18px);
+        color: $color-white;
+        width: 75%;
+        margin-bottom: 65px;
+    }
+    &__btn{
+        display: inline-block;
+        @include font($font-open, 16px);
+        background-color: $color-orange;
+        color: $color-black;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        padding: 20px 35px;
+        transition: 0.3s;
+        cursor: pointer;
+        &:hover{
+            background-color: $color-black;
+            color: $color-orange;
+            border: 1px solid $color-orange;
+        }
+    }
+    &__block{
+        margin-right: 0;
+        margin-left: auto;
+        width: 70%;
+        background-color: rgba(255, 255, 255, 0.08);
+        border-radius: 10px;
+        margin-bottom: 30px;
+        position: relative;
+        padding:14px 19px 24px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    &__block:nth-child(2){
+        margin-left: 0;
+    }
+    &__row{
+        display: flex;
+        align-items: center;
+        padding-bottom: 28px;
+    }
+    &__img{
+        margin-right: 30px;
+        border-radius: 50%;
+        z-index: 1;
+        width: 60px;
+        height: 60px;
+    }
+    &__shadow{
+        position: absolute;
+        top: 0;
+        left: 0;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 17px;
+            left: 23px;
+            background-color: $color-orange;
+            border-radius: 50%;
+            z-index: 0;
+            width: 60px;
+            height: 60px;
+        }
+    }
+    &__name{
+        @include font($font-babue, 24px);
+        color: $color-orange;
+    }
+    &__status{
+        @include font($font-open, 18px, 500);
+        color: $color-white;
+        opacity: 0.5;
+    }
+    &__icon{
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        font-size:18px;
+        color: $color-white;
+        opacity: 0.21;;
+        &:hover{
+            opacity: 1;
+        }
+    }
+    &__quote{
+        @include font($font-open, 18px, 500);
+        color: $color-white;
+        margin-bottom: 24px;
+        line-height: 1;
+    }
+    &__data{
+        @include font($font-open, 14px, 500);
+        color: $color-white;
+        margin-bottom: 24px;
+        opacity: .5;
+    }
+}

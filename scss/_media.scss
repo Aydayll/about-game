@@ -1,0 +1,347 @@
+@media screen and (max-width : 768px){
+    .container{
+        padding: 0 30px;
+    }
+    .header{
+        &__icons{
+            display: none;
+        }
+        nav{
+            width: 70%;
+        }
+    }
+    .hero{
+        &__content{
+            margin-top: 60% !important;
+        }
+    }
+    .social{
+        &__bottom{
+            width: 100% !important;
+        }
+        .col-6{
+            width: 100%;
+        }
+        .slider{
+            display: none;
+        }
+    }
+    .features{
+        &__items{
+            width: 100%;
+        }
+        .accordeon{
+            margin-left: 50px;
+            &__title{
+                font-size: 30px;
+            }
+        }
+    }
+    .system{
+        padding: 50px 0;
+        &__content{
+            width: 100%;
+        }
+    }
+    .quotess{
+        padding: 50px 0;
+        .col-6{
+            width: 100%;
+        }
+        &__items{
+            &--left{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        &__title{
+            margin: 0 !important; 
+        }
+        &__description{
+            text-align: center;
+            width: 100% !important;
+            margin: 10px 0 30px !important;
+        }
+        &__btn{
+            margin-bottom: 40px;
+        }
+        &__block{
+            width: 100% !important;
+            margin:0 0 30px !important;
+        }
+    }
+    .subscribe{
+        .col-7{
+            width: 100%;
+        }
+        &::before{
+            left: -150px !important;
+        }
+        &__title,
+        &__subtitle,
+        &__description{
+            width: 100%;
+        }
+        &__form{
+            flex-wrap: wrap;
+        }
+        &__email{
+            margin-right: 0;
+        }
+        &__submit{
+            padding: 15px 0;
+        }
+    }
+}
+@media screen and (max-width : 415px){
+    .header{
+        &__spacebetween{
+            display: flex;
+            align-items: flex-start !important;
+        }
+        &__logo{
+            img{
+                height: 60px;
+            }
+        }
+        &__nav{
+            display: none;
+        }
+        &__items{
+            .languages{
+                &::before{
+                    display: none;
+                }
+                &__drop{
+                    display: flex;
+                    flex-direction: column;
+                    left: -5px;
+                }
+                &__main{
+                    margin-top: 10px;
+                    margin-right: 80px;
+                    span{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    .burger{
+        position: fixed;
+        z-index: 1;
+        &__icon{
+            top: 37px;
+            right: 25px;
+            display: block !important;
+            z-index: 2;
+        }
+    }
+    .is-active{
+        display: block !important;
+        animation: 1s moving 0s forwards;
+        @keyframes moving {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1 ;
+            }
+        }
+    }
+    .hero{
+        &__title{
+            font-size: 40px !important;
+        }
+        &__description{
+            font-size: 18px;
+        }
+        &__content{
+            margin-top: 80% !important;
+        }
+        &__arrow{
+            margin-bottom: 60px !important;
+        }
+    }
+    .social{
+        &__items{
+            margin: 50px 0;
+        }
+        &__title{
+            font-size: 33px !important;
+        }
+        &__bottom{
+            text-align: start !important;
+            margin: 20px 0 0 0 !important;
+        }
+    }
+    .features{
+        background-position: -200px 0 !important;
+        &__subtitle{
+            font-size: 22px !important;
+        }
+        &__title{
+            font-size: 60px !important;
+        }
+        .accordeon{
+            &__title{
+                font-size: 28px;
+            }
+            &__description{
+                font-size: 16px;
+            }
+        }
+    }
+    .system{
+        .col-12{
+            width: 100% !important;
+        }
+        &__columns{
+            width: 50% !important; 
+        }
+        &__subtitle{
+            font-size: 20px !important;
+        }  
+        &__title{
+            font-size: 40px !important;
+        }
+        &__content{
+            padding-top: 20px !important;
+        }
+    }
+    .quotess{
+        &__title{
+            font-size: 50px!important;
+        }
+    }
+    .subscribe{
+        .col-7{
+            width: 100%;
+        }
+        &::before{
+            left: -200px !important;
+        }
+        &__right{
+            margin: 0 !important;
+        }
+        &__subtitle{
+            font-size: 18px !important;
+        }
+        &__title{
+            font-size: 50px !important;
+        }
+        &__description{
+            font-size: 15px !important;
+        }
+        &__title,
+        &__subtitle,
+        &__description{
+            width: 80%;
+            margin-left: auto;
+        }
+        &__form{
+            flex-wrap: wrap;
+        }
+        &__email{
+            margin-right: 0;
+        }
+        .col-8,
+        .col-4{
+            width: 100%;
+        }
+        &__input{
+            width: 100% !important;
+            margin-bottom: 20px;
+        }
+        &__submit{
+            padding: 15px 0;
+        }
+    }
+    .footer{
+        &__top{
+            justify-content: center !important;
+        }
+        &__logo{
+            margin-top: 20px;
+        }
+        &__bottom{
+            text-align: center;
+            &--left,
+            &--right{
+                width: 100%;
+                padding-top: 10px;
+            }
+        }
+        .nav{
+            width: 100%;
+            // &__menu li:nth-child(2n){
+            //     padding:0 30px;
+            // }
+            &__menu{
+                margin: 20px -20px;
+            }
+            &__menu li {
+                padding:0 30px;
+            }
+        }
+    }
+}
+@media screen and (max-width : 376px){
+    .accordeon{
+        &__title{
+            &::after{
+                height: 136px;
+            }
+        }
+    }
+    .subscribe{
+        .col-7{
+            width: 100%;
+        }
+        &__title,
+        &__subtitle,
+        &__description{
+            width: 100%;
+        }
+        &::before{
+            display: none;
+        }
+    }
+}
+@media screen and (max-width : 364px){
+    .accordeon{
+        &__title{
+            font-size: 24px !important;
+            &::after{
+                height: 134px !important;
+            }
+        }
+    }
+}
+@media screen and (max-width : 320px){
+    .hero{
+        &__content{
+            margin-top: 60% !important;
+        }
+    }
+    .social{
+        &__subtitle{
+            font-size: 18px !important;
+        }
+        &__title{
+            font-size: 26px !important;
+        }
+        &__description{
+            font-size: 14px !important;
+        }
+    }
+    .features{
+       &__subtitle{
+            font-size: 20px !important;
+        }
+        &__title{
+            font-size: 50px !important;
+        } 
+    }
+}

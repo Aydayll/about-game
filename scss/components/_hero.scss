@@ -1,0 +1,97 @@
+.hero{
+    background-image: url('../images/header-background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    
+    &__items{
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    &__content{
+        margin-top: 30%;
+    }
+    &__title{
+        @include font($font-babue, 80px);
+        color: $color-white;
+        letter-spacing: 3px;
+        line-height: 1;
+    }
+    &__description{
+        @include font($font-babue, 24px);
+        color: $color-white;
+        letter-spacing: 2px;
+        padding: 21px 0 38px;
+    }
+    &__btn{
+        color: $color-white;
+        background-color: $color-orange;
+        padding: 18px 16px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        position: relative;
+        transition: 0.3s;
+        span{
+            @include font($font-open, 16px);
+            color: #1A1917;
+            transition: 0.3s;
+        }
+        &--line{
+            padding-right: 26px;
+            transition: 0.3s;
+            &::before{
+                content: '';
+                position: absolute;
+                right: 82px;
+                top: 16px;
+                width: 2px;
+                height: 30px;
+                background-color: #1A1917;
+                opacity: 0.5;
+                transform: rotate(-10deg);
+            }
+        }
+        &:hover{
+            background-color: #1A1917;
+            span{
+                color: $color-orange;
+            }
+            .hero__btn--line{
+                &::before{
+                    background-color: $color-orange;
+                }
+            }
+        }
+    }
+    &__arrow{
+        margin-top: auto;
+        margin-bottom: 100px;
+        position: relative;
+    }
+    &__link{
+        @include font($font-open, 12px);
+        text-transform: uppercase;  
+        color: $color-white;
+        &:hover{
+            color: $color-orange;
+        }
+    }
+    &__scroll{
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        stroke: white;
+        &:hover{
+            stroke: $color-orange;
+        }
+    }
+}

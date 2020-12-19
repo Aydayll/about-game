@@ -1,0 +1,174 @@
+.header{
+    padding: 21px 0;
+    position: absolute;
+    width: 100%;
+    &__spacebetween{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__items{
+        align-items: center;
+    }
+    &__icons{
+        margin-left: 24px;
+    }
+    &__icons a{
+        padding-right: 17px;
+    }
+    &__icons a:last-child{
+        padding-right: 0;
+    }
+}
+
+.nav{
+    width: 50%;
+    &__menu{
+        display: flex;
+        justify-content: space-between;
+        text-transform: uppercase;
+    }
+    &__links{
+        @include font($font-open, 12px);
+        color: $color-white;
+        transition: 0.3s;
+        border-bottom: 2px solid transparent;
+        padding-bottom: 2px;
+        &:hover{
+            color: $color-orange;
+            border-bottom: 2px solid $color-orange;
+        }
+    }
+}
+
+.languages{
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 30px;
+        right: 0;
+        top: -2px;
+        background-color: $color-white;
+        opacity: 0.5;
+    }
+
+    &__main{
+        margin-right: 36px;
+        position: relative;
+    }
+    &__main::before,
+    &__main::after{
+        content: '';
+        position: absolute;
+        width: 6px;
+        border-radius: 3px;
+        border: 1px solid #FFFFFF;
+        background-color: $color-white;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+    &__main::before{
+        right: -14px;
+        transform:rotate(45deg);
+    }
+    &__main::after{
+        right: -18px;
+        transform:rotate(-45deg);
+    }
+    span{
+        color: $color-white;
+        @include font($font-open, 12px);
+        transition: 0.3s;
+        &:hover{
+            color: $color-orange;
+        }
+    }
+
+    &__drop{
+        position: absolute;
+        background: rgba(0, 0, 0, 0.75);
+        border-radius: 3px;
+        left: -8px;
+        span{
+            padding: 10px 20px 0 8px;
+        }
+        &:last-child{
+            padding-bottom: 10px;
+        }
+        &.is-on{
+            animation: 1s fall 0s forwards;
+        }
+        &.is-off{
+            display: none !important;
+        }
+        @keyframes fall{
+            0%{
+                top: -200px;
+            }
+            100%{
+                top: 30px;
+            }
+        }
+    }
+}
+
+.burger{
+    display: none;
+    background-color: $color-black;
+    border-radius: 0 0 0 20px ;
+    top: 0;
+    right: 0;
+    opacity: 0.9;
+    height: 50vh;
+    width: 70vw;
+    &__icon{
+        display: none;
+        position: fixed;
+        right: 20px;
+        top: 35px;
+        height: 20px;
+        width: 25px;
+        cursor: pointer;
+        span,
+        &::before,
+        &::after{
+            content: '';
+            position: absolute;
+            background-color: $color-white;
+            width: 25px;
+            height: 2px;
+        }
+        span{
+            top: 5px;
+        }
+        
+        &::before{
+            top: 0px;
+            left: 0;
+        }
+        &::after{
+            width: 15px;
+            top: 10px;
+            right: 0;
+        }
+    }
+    &__menu{
+        margin-top: 60px;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-transform: uppercase;
+    }
+    &__link{
+        padding:0 30px;
+        color: $color-white;
+        transition: 0.3s;
+        &:hover{
+            color: $color-orange;
+        }
+    }
+}

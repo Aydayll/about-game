@@ -1,0 +1,47 @@
+.social{
+    display: flex;
+    min-height: 100vh;  
+    width: 100%; 
+    background: url(../images/social-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    color: $color-white;
+    letter-spacing: 2px;
+    &__items{
+        align-items: center;
+    }
+    // &__block{
+    //     padding-left: 50px;
+    // }
+    &__subtitle{
+        @include font($font-babue, 24px);
+        text-transform: uppercase;
+    }
+    &__title{
+        @include font($font-babue, 60px);
+        line-height: 60px;  
+        text-transform: uppercase;  
+        padding-bottom: 22px;
+        border-bottom: 2px solid $color-white;
+    }
+    &__items{
+        margin: 0 -18px;
+    }
+    &__block{
+        padding:0 18px;
+    }
+    &__bottom{
+        width: 77%;
+        text-align: justify;
+        margin: 60px 0 0 auto;
+    }
+    &__description{
+        @include font($font-open, 18px, 400);
+        line-height: 22px;
+    }
+    img{
+        min-width: 100%;
+        min-height: 100%;
+    }
+}
